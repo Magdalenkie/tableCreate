@@ -1,0 +1,74 @@
+CREATE TABLE ISSUESLISTS
+
+(
+	
+ID SERIAL PRIMARY KEY,
+    
+LISTNAME VARCHAR(100)
+ 
+);
+
+CREATE TABLE ISSUES
+
+(
+	
+ID SERIAL PRIMARY KEY,
+    
+ISSUESLIST_ID VARCHAR(100),
+    
+SUMMARY VARCHAR(100),
+    
+DESCRIPTION VARCHAR(100),
+    
+USER_ID_ASSIGNEDTO VARCHAR(100)
+ 
+);
+
+INSERT INTO issueslists (listname)
+
+VALUE ("TO DO");
+
+
+
+INSERT INTO issueslists (listname)
+
+VALUE ("IN PROGRESS");
+
+
+
+INSERT INTO issueslists (listname)
+
+VALUE ("DONE");
+
+INSERT into issues (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+
+Values (1, "task 1", "summary of first task", 2);
+
+
+
+INSERT into issues (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+
+Values (2, "task 2", "summary of second task", 1);
+
+
+
+INSERT into issues (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+
+Values (3, "task 3", "summary of third task", 3);
+
+
+
+INSERT into issues (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+
+Values (4, "task 4", "summary of forth task", 5);
+
+
+
+INSERT into issues (ISSUESLIST_ID, SUMMARY, DESCRIPTION, USER_ID_ASSIGNEDTO)
+
+Values (5, "task 5", "summary of forth task", 4);
+
+
+
+COMMIT;
+
